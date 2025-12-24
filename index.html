@@ -3,61 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Sohag Mia - Personal Website</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>File Upload App</title>
+    <style>
+        body {
+            background-color: #f0f2f5; /* Light gray background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .inbox-container {
+            max-width: 350px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .inbox-container h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .message-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .message-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .message-item:last-child {
+            border-bottom: none;
+        }
+
+        .chatbot-toggler {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- Sidebar (Left Column) -->
-        <aside class="sidebar">
-            <img src="profile.jpg" alt="Md. Sohag Mia" class="profile-pic">
-            
-            <h1>Md. Sohag Mia</h1>
-            <h3>Student (Web Developer)</h3>
-
-            <ul class="contact-info">
-                <li><i class="fa-solid fa-location-dot"></i><strong>Location:</strong> Dhaka, Bangladesh</li>
-                <li><i class="fa-solid fa-phone"></i><strong>Phone:</strong> +880 16108 42097</li>
-                <li><i class="fa-solid fa-envelope"></i><strong>Email:</strong> <a href="mailto:sohag_12996@jkkniu.edu.bd">sohag_12996@jkkniu.edu.bd</a></li>
-                <li><i class="fa-solid fa-globe"></i><strong>Website:</strong> <a href="http://math.sohag.com" target="_blank">math.sohag.com</a></li>
-            </ul>
-        </aside>
-
-        <!-- Main Content (Right Column) -->
-        <main class="main-content">
-            <section class="section">
-                <h2>Summary</h2>
-                <p>
-                    Currently, I am a student of the Department of Computer Science and Engineering (CSE) at Jatiya Kabi Kazi Nazrul Islam University. I am deeply interested in emerging technologies and intelligent network solutions.
-                </p>
-                <p>
-                    Alongside my academic studies, I actively engage in various extra-curricular activities, including programming practice, problem-solving, technical events, hackathons, and collaborative team projects, which have strengthened my analytical thinking and teamwork skills.
-                </p>
-                <p>
-                    I am passionate about learning new technologies, exploring research-oriented problem solving, and continuously developing myself to become a skilled professional and researcher in the field of computer science.
-                </p>
-            </section>
-
-            <section class="section">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <h4>B.Sc. in Computer Science and Engineering (CSE)</h4>
-                    <p><strong>Jatiya Kabi Kazi Nazrul Islam University</strong> | Mymensingh, Bangladesh</p>
-                    <p><em>Start Graduation Year: 2024</em></p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Experience</h2>
-                <p>
-                    CSE student at Jatiya Kabi Kazi Nazrul Islam University, currently building skills through coursework, self-learning, and technical activities. Highly motivated to learn and grow in the field of computer science.
-                </p>
-            </section>
-        </main>
+    <!-- Inbox Section -->
+    <div class="inbox-container">
+        <h2>Inbox</h2>
+        <ul class="message-list">
+            <li class="message-item"><strong>System:</strong> Welcome to the app!</li>
+            <li class="message-item"><strong>Update:</strong> Your profile is 80% complete.</li>
+        </ul>
     </div>
 
+    <div id="root"></div>
+
+    <!-- Chatbot Toggler -->
+    <div class="chatbot-toggler">
+        <span>&#9993;</span> <!-- Envelope icon -->
+    </div>
 </body>
 </html>
