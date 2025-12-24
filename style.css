@@ -82,3 +82,25 @@ body {
 .education-item p {
     margin: 5px 0;
 }
+
+// ...existing code...
+.education-item p {
+    margin: 5px 0;
+}
+
+/* Style for contact icons */
+.contact-info i {
+    width: 20px; /* Gives space for the icon */
+    margin-right: 10px;
+    color: #005A9C; /* Icon color */
+    text-align: center;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
